@@ -2,11 +2,11 @@
   "name": "testing",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
+  "type": "module",
   "author": "",
   "license": "ISC",
   "description": "",
@@ -17,6 +17,7 @@
     "express-handlebars": "^8.0.0",
     "pg": "^8.12.0",
     "pg-hstore": "^2.3.4",
+    "pug": "^3.0.3",
     "sequelize": "^6.37.3"
   },
   "devDependencies": {
