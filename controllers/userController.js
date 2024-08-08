@@ -1,4 +1,3 @@
-// controllers/userController.js
 
 import {createUserService, getAllUsersService} from '../services/userService.js';
 

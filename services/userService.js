@@ -1,4 +1,3 @@
-// services/userService.js
 
 import User from '../models/usersdb.js';
 
