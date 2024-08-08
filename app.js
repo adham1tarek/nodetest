@@ -1,18 +1,18 @@
-const express = require('express');
-const path = require('path');
+// app.js
 
+import express from 'express';
+import userRoutes from './routes/userRoutes.js';
+import { initModels } from './models/index.js';
 const app = express();
 
-// Set up Pug as the view engine
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
+app.use(express.json());
 
-// Define a route
-app.get('/', (req, res) => {
-  res.render('home', { title: 'Home Page' });
-});
+// Initialize database models
+initModels();
 
-// Start the server
+// Set up routes
+app.use('/users', userRoutes);
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
